@@ -2,7 +2,7 @@ const router = require("express").Router();
 const sequelize = require("../../config/connection");
 const deepai = require("deepai");
 const cloudinary = require("../../config/cloud-connection");
-const { Post, User, Comment, Vote } = require("../../models");
+const { Post, User, Comment, Vote } = require("../../Models");
 const withAuth = require("../../utils/auth");
 // get all users
 router.get("/", (req, res) => {
