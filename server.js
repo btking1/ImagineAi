@@ -26,8 +26,8 @@ const hbs = exphbs.create({ helpers });
 
 app.engine("handlebars", hbs.engine);
 app.set(
-  "Views engine","handlebars",
-  path.join(__dirname,"Views")
+  "view engine","handlebars",
+  path.join(__dirname,"views")
 );
 // app.set('views', path.join(__dirname, 'Views'));
 
