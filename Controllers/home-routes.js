@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
       {
       const posts = dbPostData.map(post => post.get({ plain: true }));
 
-      res.render('home.handlebars', {
+      res.render('/', {
         posts,
         loggedIn: req.session.loggedIn
       }
