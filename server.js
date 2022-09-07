@@ -25,7 +25,7 @@ app.use(session(sess));
 const hbs = exphbs.create({ helpers });
 
 app.engine("handlebars", hbs.engine);
-app.set("views engine", path.join(__dirname, "Views"));
+app.set("views", path.join(__dirname, "Views"));
 // app.set('views', path.join(__dirname, 'Views'));
 
 app.use(express.json());
