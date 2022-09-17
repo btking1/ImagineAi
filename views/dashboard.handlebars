@@ -1,0 +1,50 @@
+<section class="new-post">
+  <h2>Create New Post</h2>
+
+  <form class="new-post-form">
+
+  <div class="form-input">
+    <input type="text" placeholder="Enter post title" id="post-title" name="post-title" />
+    </div>
+
+<div class="form-input">
+    <input id="post-url" placeholder="Enter post url" name="post-url" />
+    </div>
+
+    <button class="create " type="submit">Create</button>
+  </form>
+
+
+  <p id="loading">loading image.. please wait</p>
+
+  <form class="image-prompt-form">
+
+    <div class="form-input">
+      <input type="text" id="image-prompt" placeholder="Enter prompt" name="image-prompt" />
+    </div>
+    <button class="create"type="submit" class="Gen-btn">Generate</button>
+      
+
+  </form>
+
+
+
+
+</section>
+
+{{#if posts.length}}
+<section class="your-post-section">
+  <h2 id="your-post-title">Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>
+<script src="/javascript/text-to-image.js"></script>
