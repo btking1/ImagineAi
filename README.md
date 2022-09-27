@@ -1,4 +1,4 @@
-# Project 2: Imagine AI
+Imagine AI
 
 ![LICENSE BADGE](https://img.shields.io/badge/license-MIT-brightgreen?style=for-the-badge)
 
